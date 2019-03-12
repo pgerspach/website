@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import FutureProjects from "./pages/FutureProjects";
@@ -7,22 +7,26 @@ import Interests from "./pages/Interests";
 import Projects from "./pages/Projects";
 import Skillset from "./pages/Skillset";
 import EduAndExp from "./pages/EduAndExp";
-// import createHistory from "history/createBrowserHistory";
+import {createBrowserHistory} from "history";
 
 class App extends Component {
+  componentDidMount() {
+    console.log("HELLO4");
+    console.log(process.env.PUBLIC_URL);
+  }
   render() {
+    const browserHistory = createBrowserHistory();
     return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL}history={browserHistory}>
         <div>
           <Switch>
             <Route exact path={"/"} component={Home} />
-            <Route exact path={"/Home"} component={Home} />
-            <Route exact path={"/FutureProjects"} component={FutureProjects} />
-            <Route exact path={"/Interests"} component={Interests} />
-            <Route exact path={"/Projects"} component={Projects} />
-            <Route exact path={"/Skillset"} component={Skillset} />
-            <Route exact path={"/EduAndExp"} component={EduAndExp} />
-            <Route component={() => <div>404 Not found </div>} />
+            <Route path={"/Home"} component={Home} />
+            <Route path={"/FutureProjects"} component={FutureProjects} />
+            <Route path={"/Interests"} component={Interests} />
+            <Route path={"/Projects"} component={Projects} />
+            <Route path={"/Skillset"} component={Skillset} />
+            <Route path={"/EduAndExp"} component={EduAndExp} />
           </Switch>
         </div>
       </Router>

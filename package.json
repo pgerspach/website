@@ -4,14 +4,17 @@
   "private": true,
   "homepage": "https://pgerspach.github.io/website",
   "dependencies": {
+    "express": "^4.16.4",
+    "express-favicon": "^2.0.1",
     "gh-pages": "^2.0.1",
+    "path": "^0.12.7",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.8"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
