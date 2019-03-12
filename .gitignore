@@ -14,7 +14,7 @@ build/static/js/*.map
 /coverage
 
 # production
-# /build
+/build
 
 # misc
 .DS_Store
