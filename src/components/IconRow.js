@@ -14,7 +14,6 @@ class IconRow extends Component {
       );
       i++;
     }
-    console.log(icons);
     return (
       <div className = "icons-row-wrapper flex-column">
         {icons.map(iconset => (

@@ -9,9 +9,7 @@ class ContactForm extends Component {
 
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
-    console.log(this.state.name);
-    console.log(this.state.email);
-    console.log(this.state.message);
+
   };
   handleSubmit = event => {
     event.preventDefault();

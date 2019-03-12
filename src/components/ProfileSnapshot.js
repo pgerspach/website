@@ -16,7 +16,6 @@ class ProfileSnapshot extends Component {
     this.setState({ page: this.props.selected });
   }
   render() {
-    console.log(this.state.selected);
     return (
       <div
         style={this.props.style}

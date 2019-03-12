@@ -10,10 +10,6 @@ import EduAndExp from "./pages/EduAndExp";
 import {createBrowserHistory} from "history";
 
 class App extends Component {
-  componentDidMount() {
-    console.log("HELLO4");
-    console.log(process.env.PUBLIC_URL);
-  }
   render() {
     const browserHistory = createBrowserHistory();
     return (
