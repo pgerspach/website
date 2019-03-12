@@ -27,7 +27,6 @@ class Skillset extends Component {
       "api",
       "react"
     ];
-    const skillDescriptions = [""];
     return (
       <div>
         {!this.state.mobile ? (

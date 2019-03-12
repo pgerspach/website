@@ -14,9 +14,6 @@ class HeaderNavMobile extends Component {
     });
   };
   render() {
-    const aStyle = {
-      width: `calc((100vw - 240px) / ${this.state.links.length})`
-    };
     return (
       <div className="flex-column">
         <div className="flex-row header-nav">

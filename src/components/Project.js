@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import CircleImage from "./CircleImage";
 
 class Project extends Component {
   render() {
@@ -23,6 +22,7 @@ class Project extends Component {
           <a href={this.props.link?this.props.link:"#"} target="blank">
             {this.props.image ? (
               <img
+                alt="project"
                 src={this.props.image}
                 style={{
                   width: "285px",

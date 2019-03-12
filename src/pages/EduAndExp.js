@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import HeaderNav from "../components/HeaderNav";
 import PageTitle from "../components/PageTitle";
-import IconRow from "../components/IconRow";
+// import IconRow from "../components/IconRow";
 import Project from "../components/Project";
 import HeaderNavMobile from "../components/HeaderNavMobile";
 
