@@ -61,7 +61,7 @@ class Home extends Component {
                 <a href="https://github.com/pgerspach" target="blank">
                   <CircleImage
                     imageId="github"
-                    imageSource="./images/ghubwhite.png"
+                    imageSource="./images/ghubWhite.png"
                     size={this.state.mobile ? "60px" : "80px"}
                     circle={false}
                   />
