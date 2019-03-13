@@ -47,7 +47,7 @@ class HeaderNav extends Component {
             onMouseEnter={this.handleOnProfileSelect}
             onMouseLeave={this.handleOnProfileSelect}
           >
-            <a className="pgerspach nav-link" href="Home">
+            <a className="pgerspach nav-link" href="Home"style={{ color:((this.props.selected==="Home")?"var(--color4)":"var(--color1)")}}>
               <span>P. Gerspach</span>
             </a>
             <ProfileSnapshot

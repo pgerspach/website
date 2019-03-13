@@ -46,6 +46,7 @@ p {
   flex-direction: column;
   align-items: center;
 }
+
 .header-nav {
   position: fixed;
   left: 0;
@@ -84,6 +85,7 @@ p {
 .nav-link:hover {
   cursor: pointer;
 }
+
 .profile-snapshot {
   padding: 10px;
   left: 0;
@@ -131,7 +133,11 @@ img {
   width: 100%;
   height: 100%;
   justify-content: space-between;
-
+}
+.welcome-wrap{
+  width:50%;
+  justify-content: space-around;
+  height:calc(100vh - var(--headerHeight) - 40px);
 }
 .page-main {
   box-sizing: border-box;
@@ -145,18 +151,21 @@ img {
 .page-back {
   box-sizing: border-box;
   padding: 0 var(--centerNavWidth) 0 var(--centerNavWidth);
-  background-image: url("/images/aboutBack.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  overflow-y: visible;
-  background-position: center;
+  
 }
 .home-page {
-  background-image: url("/images/aboutBack.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  /* overflow-y: visible; */
-  background-position: center;
+  background-image: url("/images/pineapple.png");
+  justify-content: space-between;
+  padding:30px 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 67%;
+  min-height:calc(100vh - var(--headerHeight));
+  height:auto;
+}
+.page-welcome{
+  font-size:55px;
+  color:var(--color2);
 }
 .page-side {
   box-sizing: border-box;
@@ -175,12 +184,9 @@ img {
 }
 .about {
   box-sizing: border-box;
-  width: 800px;
-  height: auto;
-  min-height: calc(100vh - var(--headerHeight));
-  justify-self: flex-end;
-  align-self: flex-start;
-  padding: 10px 35px;
+  width: auto;
+  height: 100%;
+    /* padding: 10px 35px; */
   color: var(--color1);
   font-size: 35px;
 }
@@ -205,9 +211,15 @@ img {
 }
 .home-introduction {
   margin: 0;
-  margin-top: 70px;
   width: 100%;
+  line-height: 1.4em;
   align-self: flex-start;
+  backdrop-filter: blur(10px);  
+  -webkit-backdrop-filter: blur(10px);
+  color:var(--color2);
+  text-align: justify;
+  font-size: 30px;
+  align-self: flex-end;
 }
 .contact-wrap{
   padding:30px;
@@ -236,10 +248,17 @@ label{
   min-height:500px;
   background-image: url("/images/aboutBack.jpg");
   background-size: cover;
+  
   background-attachment: fixed;
   background-position: center;
   justify-content: center;
   align-items: center;
+}
+.home-divider.bw{
+  background-image: url("/images/aboutBack.jpg");
+}
+.home-divider.color{
+  background-image: url("/images/aboutBack.jpg");
 }
 .home-divider-headline{
   width:auto;
@@ -267,6 +286,10 @@ label{
   .page-main {
     width: 100%;
   }
+  .welcome-wrap{
+    width:70%;
+
+  }
 }
 @media only screen and (max-width: 450px) {
   body {
@@ -279,9 +302,7 @@ label{
     padding-left: 10px;
     padding-right: 10px;
   }
-  .about{
-    padding:20px;
-  }
+  
   .about-passion-side.right {
     width: 100%;
     padding: 0;
@@ -301,18 +322,28 @@ label{
     height: 100vw;
     padding:20px;
   }
-  .about.flex-column {
-    /* padding: 10px 5px; */
-    width: 100vw;
-    height: auto;
-  }
+
   .home-introduction {
     width: 100%;
     font-size: 23px;
   }
   .contact-form{
     width: 100%;
-    height:300px;
+    height:340px;
     justify-content: space-between;
+  }
+  .home-page{
+    padding:15px;
+    padding-top:30px;
+    background-size: 60%;
+    background-image:url("/images/pineapple.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 0%;
+    
+  }
+  .welcome-wrap{
+    width:100%;
+    height:auto;
   }
 }

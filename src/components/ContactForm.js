@@ -18,7 +18,7 @@ class ContactForm extends Component {
   };
   render() {
     return (
-      <div className="contact-wrap flex-column">
+      <div style={{backgroundColor:this.props.color}}className="contact-wrap flex-column">
         <div style={{ alignSelf: "flex-start", fontSize: "35px" }}>Contact</div>
         <p style={{ fontSize: "22px" }}>
           I would love to talk. Please fill out your information with a message
