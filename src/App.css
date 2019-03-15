@@ -227,6 +227,7 @@ img {
   padding: 30px 60px;
 }
 .contact-form {
+  box-sizing: border-box;
   width: 60%;
   height: 350px;
   justify-content: space-between;
@@ -234,6 +235,12 @@ img {
 label {
   width: 100%;
   height: auto;
+}
+input{
+  box-sizing: border-box;
+}
+textarea{
+  box-sizing: border-box;
 }
 .contact-input {
   outline-style: none;
