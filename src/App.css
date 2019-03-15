@@ -2,9 +2,11 @@
   --headerHeight: 50px;
   --color1: rgb(246, 244, 243);
   --color2: rgb(12, 35, 64);
-  --color3: #f37045;
-  --color4: #2ec4b6;
-  --color5: #d1aadf;
+  --color3: #ae37b3;
+  --color4: #3dd8b1;
+  /* --color5: #d1aadf; */
+  --color5: #82ddc6;
+
   --centerNavWidth: 20vw;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -134,10 +136,10 @@ img {
   height: 100%;
   justify-content: space-between;
 }
-.welcome-wrap{
-  width:50%;
+.welcome-wrap {
+  width: 65%;
   justify-content: space-around;
-  height:calc(100vh - var(--headerHeight) - 40px);
+  height: calc(100vh - var(--headerHeight) - 40px);
 }
 .page-main {
   box-sizing: border-box;
@@ -151,21 +153,21 @@ img {
 .page-back {
   box-sizing: border-box;
   padding: 0 var(--centerNavWidth) 0 var(--centerNavWidth);
-  
 }
 .home-page {
   background-image: url("/images/pineapple.png");
   justify-content: space-between;
-  padding:30px 60px;
+  padding: 30px 0;
+  width:75%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 67%;
-  min-height:calc(100vh - var(--headerHeight));
-  height:auto;
+  background-position: 100%;
+  min-height: calc(100vh - var(--headerHeight));
+  height: auto;
 }
-.page-welcome{
-  font-size:55px;
-  color:var(--color2);
+.page-welcome {
+  font-size: 55px;
+  color: var(--color2);
 }
 .page-side {
   box-sizing: border-box;
@@ -186,12 +188,12 @@ img {
   box-sizing: border-box;
   width: auto;
   height: 100%;
-    /* padding: 10px 35px; */
+  /* padding: 10px 35px; */
   color: var(--color1);
   font-size: 35px;
 }
 .about-passion-wrap {
-  min-height:500px;
+  min-height: 500px;
   height: auto;
   width: 100vw;
   background: var(--color1);
@@ -207,88 +209,83 @@ img {
 }
 .about-passion-icon-wrap {
   width: 350px;
-  height: 350px;  
+  height: 350px;
 }
 .home-introduction {
   margin: 0;
   width: 100%;
   line-height: 1.4em;
   align-self: flex-start;
-  backdrop-filter: blur(10px);  
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  color:var(--color2);
+  color: var(--color2);
   text-align: justify;
   font-size: 30px;
   align-self: flex-end;
 }
-.contact-wrap{
-  padding:30px;
+.contact-wrap {
+  padding: 30px 60px;
 }
-.contact-form{
+.contact-form {
   width: 60%;
-  height:350px;
+  height: 350px;
   justify-content: space-between;
 }
-label{
-  width:100%;
-  height:auto;
+label {
+  width: 100%;
+  height: auto;
 }
-.contact-input{
+.contact-input {
   outline-style: none;
   resize: none;
-  border:1px solid var(--color2);
+  border: 1px solid var(--color2);
   border-radius: 10px;
-  width:100%;
+  width: 100%;
   font-size: 20px;
-  padding-left:5px;
-  margin:5px 0;
+  padding-left: 5px;
+  margin: 5px 0;
 }
-.home-divider{
-  height:auto;
-  min-height:500px;
+.home-divider {
+  height: auto;
+  min-height: 500px;
   background-image: url("/images/aboutBack.jpg");
   background-size: cover;
-  
+  width:100%;
   background-attachment: fixed;
   background-position: center;
   justify-content: center;
   align-items: center;
 }
-.home-divider.bw{
-  background-image: url("/images/aboutBack.jpg");
-}
-.home-divider.color{
-  background-image: url("/images/aboutBack.jpg");
-}
-.home-divider-headline{
-  width:auto;
-  height:auto;
-  color:var(--color1);
+
+.home-divider-headline {
+  width: auto;
+  height: auto;
+  color: var(--color1);
+  text-align: center;
 }
 
-.contact-input-name{
-  width:100%;
-  height:30px
+.contact-input-name {
+  width: 100%;
+  height: 30px;
 }
-.contact-input-email{
-  width:100%;
-  height:30px
+.contact-input-email {
+  width: 100%;
+  height: 30px;
 }
-.contact-input-message{
-  width:100%;
-  height:140px;
+.contact-input-message {
+  width: 100%;
+  height: 140px;
 }
-.contact-input-submit{
-  width:30%;
-  height:30px;
+.contact-input-submit {
+  width: 30%;
+  height: 30px;
 }
 @media only screen and (max-width: 789px) {
   .page-main {
     width: 100%;
   }
-  .welcome-wrap{
-    width:70%;
-
+  .welcome-wrap {
+    width: 70%;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -302,16 +299,16 @@ label{
     padding-left: 10px;
     padding-right: 10px;
   }
-  
+
   .about-passion-side.right {
     width: 100%;
     padding: 0;
-    height:auto;
+    height: auto;
   }
   .about-passion-side {
     width: 100%;
-    font-size:23px;
-    padding:0px;
+    font-size: 23px;
+    padding: 0px;
   }
   .about-passion-icon-wrap {
     width: 100%;
@@ -320,30 +317,34 @@ label{
     align-content: flex-end;
     align-items: center;
     height: 100vw;
-    padding:20px;
+    padding: 20px;
   }
 
   .home-introduction {
     width: 100%;
     font-size: 23px;
   }
-  .contact-form{
+  .contact-form {
     width: 100%;
-    height:340px;
+    height: 340px;
     justify-content: space-between;
   }
-  .home-page{
-    padding:15px;
-    padding-top:30px;
+  .home-page {
+    padding: 15px;
+    padding-top: 30px;
     background-size: 60%;
-    background-image:url("/images/pineapple.png");
+    background-image: url("/images/pineapple.png");
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: 0%;
-    
   }
-  .welcome-wrap{
-    width:100%;
-    height:auto;
+  .home-divider {
+    background-attachment: scroll;
+    justify-content: center;
+    align-items: center;
+  }
+  .welcome-wrap {
+    width: 100%;
+    height: auto;
   }
 }

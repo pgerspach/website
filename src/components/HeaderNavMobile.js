@@ -15,7 +15,7 @@ class HeaderNavMobile extends Component {
   };
   render() {
     return (
-      <div className="flex-column">
+      <div className="flex-column" style={{display:this.props.visible?"flex":"none"}}>
         <div className="flex-row header-nav">
           {this.state.linksLeft.map(linkName => (
             <a
@@ -44,10 +44,8 @@ class HeaderNavMobile extends Component {
           ))}
           <div
             style={{ height: "100%", position: "relative" }}
-            onMouseEnter={this.handleOnProfileSelect}
-            onMouseLeave={this.handleOnProfileSelect}
           >
-            <a className="pgerspach nav-link" href="Home">
+            <a className="pgerspach nav-link" href="Home" style={{ color:((this.props.selected==="Home")?"var(--color4)":"var(--color1)")}}>
               <span>P. Gerspach</span>
             </a>
             <ProfileSnapshot

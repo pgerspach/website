@@ -38,7 +38,7 @@ class Projects extends Component {
         {!this.state.mobile ? (
           <HeaderNav selected={"Projects"} />
         ) : (
-          <HeaderNavMobile selected={"Projects"} />
+          <HeaderNavMobile selected={"Projects"}visible={true} />
         )}
         <section className={`page projects-page flex-row`}>
           <div className="flex-column page-main">

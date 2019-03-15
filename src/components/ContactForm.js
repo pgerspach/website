@@ -18,14 +18,8 @@ class ContactForm extends Component {
   };
   render() {
     return (
-      <div style={{backgroundColor:this.props.color}}className="contact-wrap flex-column">
-        <div style={{ alignSelf: "flex-start", fontSize: "35px" }}>Contact</div>
-        <p style={{ fontSize: "22px" }}>
-          I would love to talk. Please fill out your information with a message
-          and I will reach out to you. Or, you can contact me directly at the
-          email and phone provided above.
-        </p>
-        <form onSubmit={this.handleSubmit} className="contact-form flex-column">
+      
+        <form onSubmit={this.handleSubmit} className="contact-form flex-column"style={{color:this.props.color||"black"}}>
           <label>
             Name
             <input
@@ -66,7 +60,6 @@ class ContactForm extends Component {
             value="Submit"
           />
         </form>
-      </div>
     );
   }
 }

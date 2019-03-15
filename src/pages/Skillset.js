@@ -32,7 +32,7 @@ class Skillset extends Component {
         {!this.state.mobile ? (
           <HeaderNav selected={"Skillset"} />
         ) : (
-          <HeaderNavMobile selected={"Skillset"} />
+          <HeaderNavMobile selected={"Skillset"} visible={true} />
         )}
         <section className={`page skillset-page flex-row`}>
           <div className="flex-column page-main">
