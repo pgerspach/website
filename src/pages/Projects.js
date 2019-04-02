@@ -40,7 +40,7 @@ class Projects extends Component {
         ) : (
           <HeaderNavMobile selected={"Projects"}visible={true} />
         )}
-        <section className={`page projects-page flex-row`}>
+        <section className={`page projects-page flex-row`}  style={{minWidth:"0"}}>
           <div className="flex-column page-main">
             <PageTitle pageName="Projects" />
             <div>
@@ -59,6 +59,7 @@ class Projects extends Component {
                 image={project.image}
                 link={project.link}
                 border={true}
+                bodyDirection="column"
               />
             ))}
           </div>

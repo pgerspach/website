@@ -21,7 +21,7 @@ class History extends Component {
         ) : (
           <HeaderNavMobile selected={"History"} />
         )}
-        <section className={`page history-page flex-column`}>
+        <section className={`page history-page flex-column`} style={{minWidth:"0"}}>
           <PageTitle pageName="History" />
         </section>
       </div>

@@ -18,8 +18,8 @@ class Project extends Component {
         >
           <span>{this.props.name?this.props.name:"Project Name"}</span>
         </div>
-        <div className="project-body">
-          <a href={this.props.link?this.props.link:"#"} target="blank">
+        <div className={`project-body ${this.props.bodyDirection ==="column"?"flex-column":"flex-row"}`}>
+          <a href={this.props.link?this.props.link:"#"} target="blank" style={{alignSelf:"flex-start"}}> 
             {this.props.image ? (
               <img
                 alt="project"

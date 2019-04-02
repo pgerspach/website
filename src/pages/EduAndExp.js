@@ -19,11 +19,13 @@ class EduAndExp extends Component {
     const education = [
       {
         name: "University of Notre Dame",
-        image:"./images/ndlogo.png"
+        image:"./images/ndlogo.png",
+        description:"B.S Mechanical Engineering, 3.60 GPA"
       },
       {
         name: "Columbia University Engineering Coding Boot Camp",
-        image:"./images/columbia.png"
+        image:"./images/columbia.png",
+        description:"Certificate of Completion, Full Stack Web Development"
       }
     ];
     return (
@@ -33,7 +35,7 @@ class EduAndExp extends Component {
         ) : (
           <HeaderNavMobile selected={"Edu And Exp"} />
         )}
-        <section className={`page interests-page flex-row`}>
+        <section className={`page interests-page flex-row`} style={{minWidth:"0"}}>
           <div className="flex-column page-main">
             <PageTitle pageName="Education And Experience" />
             <div>
@@ -48,7 +50,7 @@ class EduAndExp extends Component {
               </p>
             </div>
             {education.map(education => (
-              <Project image={education.image?education.image:null}description={""} name={education.name} />
+              <Project image={education.image?education.image:null}description={education.description} name={education.name} />
             ))}
           </div>
         </section>

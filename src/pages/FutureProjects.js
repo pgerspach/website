@@ -21,7 +21,7 @@ class FutureProjects extends Component {
         ) : (
           <HeaderNavMobile selected={"Future Projects"} />
         )}
-        <section className={`page future-projects-page flex-row`}>
+        <section className={`page future-projects-page flex-row`} style={{minWidth:"0"}}>
           <div className="flex-column page-main">
             <PageTitle pageName="Future Projects" />
           </div>
