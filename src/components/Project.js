@@ -9,17 +9,18 @@ class Project extends Component {
           boxShadow: "0 0 3px 0px black",
           padding: "10px",
           marginBottom: "30px",
-          width:"100%"
+          width:"100%",
+          background:"white"
         }}
       >
         <div
           className="project-title"
-          style={{ fontSize: "32px", marginBottom: "10px" }}
+          style={{ fontSize: "32px", marginBottom: "10px", textAlign:"left" }}
         >
           <span>{this.props.name?this.props.name:"Project Name"}</span>
         </div>
-        <div className={`project-body ${this.props.bodyDirection ==="column"?"flex-column":"flex-row"}`}>
-          <a href={this.props.link?this.props.link:"#"} target="blank" style={{alignSelf:"flex-start"}}> 
+        <div className={`project-body ${this.props.bodyDirection ==="column"?"flex-column":"flex-row"}`}style={this.props.bodyDirection==="column"?null:{justifyContent:"space-around"}}>
+          <a href={this.props.link?this.props.link:null} target="blank" style={{alignSelf:"flex-start"}}> 
             {this.props.image ? (
               <img
                 alt="project"
@@ -29,14 +30,15 @@ class Project extends Component {
                   height: "160px",
                   borderBottom: this.props.border?"2px solid var(--color5)":"none",
                   borderTop: this.props.border?"2px solid var(--color5)":"none",
-                  borderRadius: "10px"
+                  borderRadius: "10px",
+                  objectFit:this.props.contain?"contain":null
                 }}
               />
             ) : (
               null
             )}
           </a>
-          <div className="project-description">
+          <div className="project-description" style={{alignSelf:"flex-start"}}>
             {this.props.description.split("|").map(par => (
               <p>{par.trim()}</p>
             ))}

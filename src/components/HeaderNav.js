@@ -15,7 +15,7 @@ class HeaderNav extends Component {
   };
   render() {
     return (
-      <div className="flex-column">
+      <div className="flex-column"  style={{display:this.props.visible?"flex":"none"}}>
         <div className="flex-row header-nav">
           {this.state.linksLeft.map(linkName => (
             <a
