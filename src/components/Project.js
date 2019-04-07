@@ -42,6 +42,7 @@ class Project extends Component {
             {this.props.description.split("|").map(par => (
               <p>{par.trim()}</p>
             ))}
+            {this.props.githubLink?(<p>{"Link to github: "}<a href={this.props.githubLink}>{this.props.name}</a></p>):null}
           </div>
         </div>
       </div>
